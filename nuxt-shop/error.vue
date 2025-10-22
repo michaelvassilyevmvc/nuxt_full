@@ -1,8 +1,8 @@
 <template>
   <div>
-    <h1>{{ error.statusCode}}</h1>
+    <h1>{{ error.statusCode}} ошибка</h1>
     <p>{{ error.statusMessage}}</p>
-    <ActionButton>На главную</ActionButton>
+    <ActionButton color="ghost">На главную</ActionButton>
   </div>
 </template>
 
