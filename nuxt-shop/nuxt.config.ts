@@ -1,11 +1,11 @@
 // https://nuxt.com/docs/api/configuration/nuxt-config
 export default defineNuxtConfig({
   compatibilityDate: '2025-07-15',
-  devtools: { enabled: true },
-  runtimeConfig:{
-    token:"",
-    public:{
-      apiurl:""
+  devtools: {enabled: true},
+  runtimeConfig: {
+    token: "",
+    public: {
+      apiurl: ""
     }
   },
   modules: [
@@ -13,5 +13,5 @@ export default defineNuxtConfig({
     '@nuxt/fonts',
     '@nuxt/image',
     '@nuxt/scripts'
-  ]
+  ],
 })
