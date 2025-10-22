@@ -1,3 +1,11 @@
+<script setup lang="ts">
+function openAbout() {
+  navigateTo("/about");
+}
+</script>
 <template>
-  <div>Index</div>
+  <div>Index
+<!--    <NuxtLink to="/about" no-prefetch>About</NuxtLink>-->
+    <button @click="openAbout">Перейти</button>
+  </div>
 </template>
