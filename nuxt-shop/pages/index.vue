@@ -1,11 +1,10 @@
 <script setup lang="ts">
 function openAbout() {
-  navigateTo("/about");
+  navigateTo("/about.vue");
 }
 </script>
 <template>
   <div>Index
-<!--    <NuxtLink to="/about" no-prefetch>About</NuxtLink>-->
     <button @click="openAbout">Перейти</button>
   </div>
 </template>
