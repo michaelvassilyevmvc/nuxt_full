@@ -8,11 +8,21 @@
     --color-white-light: #FFFFFF;
 }
 
-body {
-    font-family: var(--font);
+*,
+*::before,
+*::after {
+    box-sizing: border-box;
+    margin: 0;
 }
 
-h1{
+body {
+    font-family: var(--font);
+    text-rendering: optimizeLegibility;
+    -webkit-font-smoothing: antialiased;
+    -moz-osx-font-smoothing: grayscale;
+}
+
+h1 {
     color: var(--color-black);
     text-align: center;
     font-weight: 500;
