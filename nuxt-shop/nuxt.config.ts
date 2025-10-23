@@ -8,6 +8,14 @@ export default defineNuxtConfig({
       apiurl: ""
     }
   },
+  icon:{
+    customCollections:[
+      {
+        prefix: 'icons',
+        dir: './assets/icons',
+      }
+    ]
+  },
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
