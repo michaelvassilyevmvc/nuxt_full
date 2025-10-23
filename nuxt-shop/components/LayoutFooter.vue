@@ -52,6 +52,12 @@
   gap: 50px;
 }
 
+.footer hr {
+  border: none;
+  border-bottom: 1px solid var(--color-gray);
+  height: 1px;
+}
+
 .footer__top {
   display: flex;
   justify-content: space-between;
@@ -98,9 +104,10 @@
   position: relative;
 }
 
-.footer__form input{
+.footer__form input {
   min-width: 380px;
 }
+
 .footer__subscribe {
   position: absolute;
   right: 0;
