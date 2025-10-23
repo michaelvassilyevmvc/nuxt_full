@@ -1,8 +1,6 @@
 <template>
   <div>
-    Test
     <NuxtLayout>
-      Привет!
       <NuxtPage/>
     </NuxtLayout>
   </div>

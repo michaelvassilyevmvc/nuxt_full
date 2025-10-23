@@ -45,7 +45,7 @@
 </template>
 <style scoped>
 .footer {
-  margin: 0 auto;
+  margin: 60px auto 0;
   max-width: 1248px;
   display: flex;
   flex-direction: column;
