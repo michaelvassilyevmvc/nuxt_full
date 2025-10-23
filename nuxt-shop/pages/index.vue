@@ -6,7 +6,6 @@ function openAbout() {
 </script>
 <template>
   <div>Index
-    <IconTwitter />
     <Icon name="icons:twitter" />
     <NuxtLink to="/about">About</NuxtLink>
     <button @click="openAbout">Перейти</button>
