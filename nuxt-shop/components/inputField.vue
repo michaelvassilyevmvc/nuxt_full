@@ -15,6 +15,7 @@ const {variant} = defineProps<{
   background: none;
   border: none;
   color: var(--color-black);
+  width: 300px;
 }
 
 .input::placeholder {

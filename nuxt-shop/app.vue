@@ -10,7 +10,7 @@
 import "~/assets/styles/main.css"
 import type {LayoutKey} from "#build/types/layouts";
 
-const name = ref<LayoutKey>('auth')
+const name = ref<LayoutKey>('default')
 </script>
 <style>
 </style>

@@ -2,6 +2,9 @@
   <div>
     <div>Шапка</div>
     <slot/>
-    <div>Подвал</div>
+    <Footer />
   </div>
 </template>
+<script setup lang="ts">
+import Footer from "~/components/Footer.vue";
+</script>
