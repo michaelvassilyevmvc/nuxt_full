@@ -3,8 +3,8 @@
 </script>
 
 <template>
-  <hr>
   <div class="footer">
+  <hr>
     <div class="footer__top">
       <ul>
         <li>
@@ -45,8 +45,9 @@
 </template>
 <style scoped>
 .footer {
-  margin: 60px auto 0;
-  max-width: 1248px;
+  width: 100%;
+  margin: 0 auto;
+  max-width: 1280px;
   display: flex;
   flex-direction: column;
   gap: 50px;

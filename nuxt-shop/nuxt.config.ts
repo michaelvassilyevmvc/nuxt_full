@@ -15,6 +15,20 @@ export default defineNuxtConfig({
       'postcss-nested':{}
     }
   },
+  // -- page-transition --
+  // app:{
+  //   pageTransition:{
+  //     name: 'page',
+  //     mode: 'out-in',
+  //   }
+  // },
+  // -- layout-transition --
+  // app:{
+  //   layoutTransition:{
+  //     name: 'layout',
+  //     mode: 'out-in',
+  //   }
+  // },
   modules: [
     '@nuxt/eslint',
     '@nuxt/fonts',
