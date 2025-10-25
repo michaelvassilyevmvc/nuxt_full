@@ -15,6 +15,16 @@ export default defineNuxtConfig({
       'postcss-nested':{}
     }
   },
+  app:{
+    head:{
+      link:[
+        {
+          rel:'stylesheet',
+          href:'https://cdnjs.cloudflare.com/ajax/libs/normalize/8.0.1/normalize.min.css'
+        }
+      ]
+    }
+  },
   // -- page-transition --
   // app:{
   //   pageTransition:{
