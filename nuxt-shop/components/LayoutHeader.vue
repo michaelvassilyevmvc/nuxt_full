@@ -31,7 +31,7 @@
 
 </script>
 
-<style scoped>
+<style scoped lang="postcss">
 .header {
   width: 100%;
   margin: 48px auto 0;
@@ -40,55 +40,58 @@
   gap: 50px;
   justify-content: space-between;
   border-bottom: 1px solid var(--color-gray);
+
+  &__content {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__menu {
+    display: flex;
+    gap: 60px;
+    align-items: center;
+  }
+
+  &__menu a {
+    font-size: 16px;
+    line-height: 27px;
+    color: var(--color-black);
+    text-decoration: none;
+    padding-bottom: 48px;
+
+  }
+
+  &__menu a.router-link-active {
+    border-bottom: 1px solid var(--color-black);
+  }
+
+  &__menu a:hover {
+    color: var(--color-dark-gray);
+  }
+
+  &__icons {
+    display: flex;
+    gap: 40px;
+    align-items: center;
+  }
+
+  &__icons a {
+    padding-bottom: 48px;
+  }
+
+  &__icons a.router-link-active {
+    border-bottom: 1px solid var(--color-black);
+  }
+
+  &__hr {
+    border-left: 1px solid var(--color-dark-gray);
+    height: 17px;
+    align-self: flex-start;
+    margin-top: 4px;
+  }
+
 }
 
-.header__content {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-}
 
-.header__menu {
-  display: flex;
-  gap: 60px;
-  align-items: center;
-}
-
-.header__menu a {
-  font-size: 16px;
-  line-height: 27px;
-  color: var(--color-black);
-  text-decoration: none;
-  padding-bottom: 48px;
-
-}
-
-.header__menu a.router-link-active {
-  border-bottom: 1px solid var(--color-black);
-}
-
-.header__menu a:hover{
-  color: var(--color-dark-gray);
-}
-
-.header__icons {
-  display: flex;
-  gap: 40px;
-  align-items: center;
-}
-
-.header__icons a {
-  padding-bottom: 48px;
-}
-
-.header__icons a.router-link-active {
-  border-bottom: 1px solid var(--color-black);
-}
-
-.header__hr {
-  border-left: 1px solid var(--color-dark-gray);
-  height: 17px;
-  align-self: flex-start;
-  margin-top: 4px;
-}
 </style>
