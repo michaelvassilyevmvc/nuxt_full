@@ -28,4 +28,7 @@ h1 {
     font-weight: 500;
     font-size: 33px;
     line-height: 43px;
+    &.left{
+        text-align: left;
+    }
 }

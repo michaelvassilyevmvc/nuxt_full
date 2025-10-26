@@ -4,47 +4,47 @@ import type {GetCategoriesResponse} from "~/interfaces/category.interface";
 
 const config = useRuntimeConfig()
 const API_URL = config.public.apiurl
-const input = ref('')
 const select = ref('')
 
-await useAsyncData<GetCategoriesResponse>(
-    'categories',
-    () => {
-      return $fetch(API_URL + "/categories")
-    },
-    {
-      watch: [input]
-    }
-)
+const {data} = await useFetch<GetCategoriesResponse>(API_URL + "/categories")
 
-//
-// $fetch - не SSR friendly, используется внутри функции, не на верхнем уровне
-// useFetch - используем только на верхнем, он SSR friendly
-// useAsyncData - SSR friendly, нужен если сложный вариант получения данных
+const selectDefault = {
+  value: '',
+  label: 'Категории'
+}
+const categoriesSelect = computed(() => {
+  return data.value ? data.value.categories.map(category => ({
+    value: category.id.toString(),
+    label: category.name
+  })).concat(selectDefault) : [selectDefault];
+})
 
-// try {
-//   const data = await $fetch<GetCategoriesResponse>(API_URL + "/categories")
-//   console.log(data)
-// } catch (error) {
-//   console.error('err',error)
-// }
 
 </script>
 <template>
   <div>
-    Catalog
-    <SelectField
-        v-model="select"
-        :options="[
-            {
-              value:'',label:'Категории'
-            },
-            {
-              value:'1',label: 'Первый'
-            },
-            {
-              value: '2', label:'Второй'
-            }
-          ]"/>
+    <h1 class="left">Каталог товаров</h1>
+    <div class="catalog">
+      <div class="catalog__filter">
+        <SelectField
+            v-model="select"
+            :options="categoriesSelect"/>
+
+      </div>
+      <div>
+
+      </div>
+    </div>
   </div>
 </template>
+<style scoped>
+.catalog {
+  display: flex;
+
+  &__filter {
+    width: 260px;
+    gap: 36px;
+  }
+}
+
+</style>
