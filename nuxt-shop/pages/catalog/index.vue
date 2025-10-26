@@ -9,7 +9,7 @@ const input = ref('')
 const {data, error, refresh} = await useAsyncData<GetCategoriesResponse>('categories', () => {
   return $fetch(API_URL+"/categories")
 })
-console.log(data.value)
+console.log('Data: ',data.value?.categories)
 console.log(error.value)
 
 async function sendData() {
@@ -20,18 +20,13 @@ async function sendData() {
 // useFetch - используем только на верхнем, он SSR friendly
 // useAsyncData - SSR friendly, нужен если сложный вариант получения данных
 
-// try {
-//   const data = await $fetch<GetCategoriesResponse>(API_URL + "/categories")
-//   console.log(data)
-// } catch (error) {
-//   console.error('err',error)
-// }
 
 </script>
 <template>
   <div>
     Catalog
-    <InputField variant="black" v-model="input"/>
-    <button @click="sendData">Отправить</button>
+    <SelectField :categoryList="data?.categories" />
+<!--    <InputField variant="black" v-model="input"/>-->
+<!--    <button @click="sendData">Отправить</button>-->
   </div>
 </template>
