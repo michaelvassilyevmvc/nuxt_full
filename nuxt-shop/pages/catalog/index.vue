@@ -33,18 +33,19 @@ await useAsyncData<GetCategoriesResponse>(
 <template>
   <div>
     Catalog
-    <SelectField
-        v-model="select"
-        :options="[
-            {
-              value:'',label:'Категории'
-            },
-            {
-              value:'1',label: 'Первый'
-            },
-            {
-              value: '2', label:'Второй'
-            }
-          ]"/>
+<!--    <SelectField-->
+<!--        v-model="select"-->
+<!--        :options="[-->
+<!--            {-->
+<!--              value:'',label:'Категории'-->
+<!--            },-->
+<!--            {-->
+<!--              value:'1',label: 'Первый'-->
+<!--            },-->
+<!--            {-->
+<!--              value: '2', label:'Второй'-->
+<!--            }-->
+<!--          ]"/>-->
+    <ProductCard />
   </div>
 </template>
