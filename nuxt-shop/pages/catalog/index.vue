@@ -5,16 +5,18 @@ import type {GetCategoriesResponse} from "~/interfaces/category.interface";
 const config = useRuntimeConfig()
 const API_URL = config.public.apiurl
 const input = ref('')
+const select = ref('')
 
-const {data, error, refresh} = await useAsyncData<GetCategoriesResponse>('categories', () => {
-  return $fetch(API_URL+"/categories")
-})
-console.log(data.value)
-console.log(error.value)
+await useAsyncData<GetCategoriesResponse>(
+    'categories',
+    () => {
+      return $fetch(API_URL + "/categories")
+    },
+    {
+      watch: [input]
+    }
+)
 
-async function sendData() {
-  refresh()
-}
 //
 // $fetch - не SSR friendly, используется внутри функции, не на верхнем уровне
 // useFetch - используем только на верхнем, он SSR friendly
@@ -31,7 +33,18 @@ async function sendData() {
 <template>
   <div>
     Catalog
-    <InputField variant="black" v-model="input"/>
-    <button @click="sendData">Отправить</button>
+    <SelectField
+        v-model="select"
+        :options="[
+            {
+              value:'',label:'Категории'
+            },
+            {
+              value:'1',label: 'Первый'
+            },
+            {
+              value: '2', label:'Второй'
+            }
+          ]"/>
   </div>
 </template>
