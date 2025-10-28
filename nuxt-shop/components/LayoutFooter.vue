@@ -45,6 +45,7 @@
 </template>
 <style scoped>
 .footer {
+  padding: 0 16px;
   width: 100%;
   margin: 0 auto;
   max-width: 1280px;

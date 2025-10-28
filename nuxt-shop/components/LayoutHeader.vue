@@ -33,6 +33,7 @@
 
 <style scoped lang="postcss">
 .header {
+  padding:0 16px;
   width: 100%;
   margin: 48px auto 0;
   max-width: 1280px;
